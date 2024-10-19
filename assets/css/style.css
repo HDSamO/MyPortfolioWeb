@@ -1,0 +1,330 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.fixed-navbar {
+    padding: 12px 0px 12px 0px;
+    left: 3vw;
+    right:3vw;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-nav > li,
+.navbar-brand {
+    padding-left:1vw;
+    padding-right:1vw;
+    font-size: 1.25rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+
+}
+
+.fixed-container {
+    padding: 12px 0px 12px 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 4;
+}
+
+.simple-parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax {
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    perspective: 1px;
+    perspective-origin: center;
+}
+.parallax__layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform-origin: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.parallax__layer_forest_1 {
+    z-index: -1;
+    background-image: url('../images/forest-l1.png');
+}
+
+.parallax__layer_forest_2 {
+    z-index: -2;
+    background-image: url('../images/forest-l2.png');
+}
+
+.parallax__layer_bridge {
+    z-index: -3;
+    background-image: url('../images/bridge.png');
+}
+
+.parallax__layer_mountain_1 {
+    z-index: -4;
+    background-image: url('../images/mountain-l1.png');
+}
+
+.parallax__layer_mountain_2 {
+    z-index: -5;
+    background-image: url('../images/mountain-l2.png');
+}
+
+.parallax__layer_mountain_3 {
+    z-index: -6;
+    background-image: url('../images/mountain-l3.png');
+}
+
+.parallax__layer_sky {
+    z-index: -7;
+    background-image: url('../images/sky-background.png');
+}
+
+/* .parralax-background {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+} */
+
+.big-image{
+    z-index: -1;
+    /* background-image: url('../images/main-background-t1.jpg'); */
+}
+
+#overllay_container {
+    position: relative;
+}
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 0.2));
+    z-index: 0;
+}
+
+.black-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);  
+    z-index: 1;  
+}
+
+.img {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+.blue-overlay {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.25s;
+    z-index: 1;
+  }
+.blue-overlay {
+    background:linear-gradient( rgba(4, 41, 66, 0.3), rgba(4, 41, 66, 0.3) ) ;
+    font-size: 24px;
+}
+
+.full-screen {  
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.nudge-up {
+    margin-bottom: 3rem;
+}
+.white {
+    color: white;
+}
+.center-text-line {
+    z-index: 0;
+    width: 100%;
+}
+.big-text {
+    font-size: 3rem;
+    margin-bottom: 0.6rem;
+}
+
+.semibig-text {
+    font-size: 2.5rem;
+}
+.medium-text {
+    font-size: 1.5rem;
+}
+.normal-text {
+    font-size: 1.25rem;
+    /* opacity: 0.9; */
+}
+.small-text {
+    font-size: 0.8rem;
+    /* opacity: 0.9;     */
+}
+.down-arrow {
+    padding: 12px 16px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 1);
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    z-index: 1;
+}
+
+.down-arrow:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+#main {
+    height: 3000px;
+}
+
+
+.divider {
+    width: 100%;
+    padding: 2px 0 2px 0;
+    margin: -2px 0 -2px 0;
+    height: 20vh;
+    background:linear-gradient(rgb(0,15,22), rgb(11,25,44) 90%, rgb(11,25,44))
+
+
+    /* background:linear-gradient( #0B192C , rgb(0,15,22),  #0B192C 20px, rgb(0,15,22) 20px) */
+    /* background: repeating-linear-gradient( rgb(0,15,22), rgb(0,15,22) 20px,  #0B192C 60px ,  #0B192C 40px) */
+}
+
+.divider-reversed {
+    width: 100%;
+    padding: 2px 0 2px 0;
+    margin: -2px 0 -2px 0;
+    height: 20vh;
+    background:linear-gradient(rgb(11,25,44),  rgb(0,15,22))
+
+
+    /* background:linear-gradient( #0B192C , rgb(0,15,22),  #0B192C 20px, rgb(0,15,22) 20px) */
+    /* background: repeating-linear-gradient( rgb(0,15,22), rgb(0,15,22) 20px,  #0B192C 60px ,  #0B192C 40px) */
+}
+#about {
+    overflow: auto;
+    width: 100%;
+    background-color: rgb(11, 25, 44);
+    /* padding-bottom: 5vh; */
+
+
+    /* background-color: rgb(193, 225, 240); */
+    /* background: linear-gradient( rgb(0,15,22, 1), rgb(0,15,22, 0.5) 100%);   */
+}
+
+.sumarize-box {
+    height: 300px;
+    width: 600px;
+
+    background-color: rgb(8, 75, 109);
+}
+
+#experience {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0,15,22);
+    /* color: wwhite; */
+}
+
+#contact {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0,15,22);
+
+}   
+.black-bg {
+    background-color: rgb(25, 38, 46) !important;
+    z-index: 2;
+}
+
+.custom-card {
+    overflow: auto;
+    height:  1%;
+    background-color:  rgb(7, 15, 26, 0);
+    border: none;
+}
+
+.simple-col {
+    background-color:  rgb(7, 15, 26);
+
+}
+
+.fas {
+    color: white;
+}
+
+h1::selection {
+    background-color: rgb(255, 166, 1);
+}
+
+p::selection {
+    background-color: rgb(255, 166, 1);
+}
+
+b::selection {
+    background-color: rgb(255, 166, 1);
+}
+
+div::selection {
+    background-color: rgb(255, 166, 1);
+}
+
+.test {
+
+    /* border: 2px; */
+    border-color: rgb(255, 255, 255);
+    /* background-color: aqua; */
+}
+
+.tdt-logo {
+    width: 350px;
+}
+.test-bg {
+    height: 512px;
+    background-image: url("/assets/images/aurora.png");
+    backdrop-filter: grayscale(0.5) opacity(0.1)
+}
