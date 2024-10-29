@@ -30,7 +30,7 @@
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 4;
+    z-index: 100;
 }
 
 .simple-parallax {
@@ -131,8 +131,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.2);  
-    z-index: 1;  
+    background-color: rgba(0, 0, 0, 0.6);  
+    z-index: 100;  
 }
 
 .img {
@@ -224,10 +224,12 @@
 
 .divider {
     width: 100%;
-    padding: 2px 0 2px 0;
-    margin: -2px 0 -2px 0;
+    /* padding: 2px 0 2px 0; */
+    /* margin: -2px 0 -2px 0; */
     height: 20vh;
     background:linear-gradient(rgb(0,15,22), rgb(11,25,44) 90%, rgb(11,25,44))
+    /* background:linear-gradient(rgb(0,15,22), rgb(11,25,44) 90%, rgb(11,25,44)) */
+
 
 
     /* background:linear-gradient( #0B192C , rgb(0,15,22),  #0B192C 20px, rgb(0,15,22) 20px) */
@@ -239,17 +241,16 @@
     padding: 2px 0 2px 0;
     margin: -2px 0 -2px 0;
     height: 20vh;
+    /* background:rgb(11,25,44); */
+
     background:linear-gradient(rgb(11,25,44),  rgb(0,15,22))
 
 
-    /* background:linear-gradient( #0B192C , rgb(0,15,22),  #0B192C 20px, rgb(0,15,22) 20px) */
-    /* background: repeating-linear-gradient( rgb(0,15,22), rgb(0,15,22) 20px,  #0B192C 60px ,  #0B192C 40px) */
 }
 #about {
     overflow: auto;
     width: 100%;
     background-color: rgb(11, 25, 44);
-    /* padding-bottom: 5vh; */
 
 
     /* background-color: rgb(193, 225, 240); */
@@ -265,17 +266,30 @@
 
 #experience {
     width: 100%;
-    height: 100vh;
+    overflow: auto;
+    padding-bottom: 10vh;
     background-color: rgb(0,15,22);
+    /* background-color: rgb(11, 25, 44); */
+
     /* color: wwhite; */
 }
 
 #contact {
     width: 100%;
-    height: 100vh;
-    background-color: rgb(0,15,22);
+    height: 48vh;
+    /* background-color: rgb(0, 0, 0); */
+
+    background-color: rgb(11, 25, 44);
+    /* background-color: rgb(0,15,22); */
+
 
 }   
+
+#project {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0,15,22);
+} 
 .black-bg {
     background-color: rgb(25, 38, 46) !important;
     z-index: 2;
@@ -322,9 +336,154 @@ div::selection {
 
 .tdt-logo {
     width: 350px;
+    margin-bottom: 64px;
 }
+
+.icon-logo {
+    width: 450px;
+}
+.icon {
+    object-fit: contain; /* Ensures the aspect ratio is maintained */
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition:
+    filter 0.3s
+    /* -webkit-filter 0.3s */
+}
+
+.icon:hover {
+    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+    filter: none;
+}
+
+.img-responsive{
+  display: block;
+  max-width: 100%;
+}
+  
 .test-bg {
-    height: 512px;
+    height: 912px;
     background-image: url("/assets/images/aurora.png");
     backdrop-filter: grayscale(0.5) opacity(0.1)
 }
+
+.test-gradient {
+    position: relative;
+    bottom: 0;
+    height: 20vh;
+    z-index: 1;
+    background:linear-gradient(rgba(0,15,22, 0), rgba(0,15,22,1));
+
+
+}
+
+.small-top-gradient {
+    position: relative;
+    top: 0;
+    height: 32vh;
+    z-index: 1;
+    background:linear-gradient(rgba(0,15,22,1), rgba(0,15,22, 0));
+}
+
+.small-bottom-gradient {
+    position: relative;
+    top: 100%;
+    transform: translateY(-199%);
+    height: 32vh;
+    z-index: 1;
+    background:linear-gradient(rgba(0,15,22, 0), rgba(0,15,22,1));
+}
+
+.white-horizontal {
+    background-color: white;
+    height: 2px;
+}
+
+.gray-overlay {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* msie */
+    background-color: #000;
+}
+
+.sumary-icon, .sumary-text {
+    transition: color 0.3s ease; /* Smooth transition */
+}
+  
+  .hovered .sumary-icon, .hovered .sumary-text {
+    color: #FF5733; /* Change to your desired hover color */
+}
+
+.sumary-box {
+    position: relative;
+}
+.cover-card {
+    border-radius: 10px;
+    border: #454545;
+    border-width: 2px;
+    border-style: groove;
+    position: absolute;
+    width: 99%;
+    height: 350px;
+    margin-left: -10px;
+    background-color: rgba(11, 25, 44, 1); /* Semi-transparent black */
+    z-index: 10; /* Ensure it's on top */
+}
+
+.cover-card h2 {
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: lighter;
+}
+
+#contact {
+    position: relative;
+    /* height: 100vh;  */
+    overflow: hidden;
+  }
+  
+.unusual-carousel {
+    background-color: rgb(0,15,22);
+    position: relative;
+    height: 100%;
+}
+  
+.img-cover {
+    background-color: rgb(0,15,22);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1; /* Set a default z-index */
+    transform-origin: left center;
+}
+#img1 {
+    z-index: 5;
+}
+#img2 {
+    z-index: 4;
+}
+#img3 {
+    z-index: 3;
+}
+#img4 {
+    z-index: 2;
+}
+#img5 {
+    z-index: 1;
+}
+.img-cover img {
+    background-color: rgb(0,15,22);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+  
