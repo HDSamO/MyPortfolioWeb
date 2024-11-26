@@ -651,7 +651,7 @@ div::selection {
       rgba(0, 0, 0, 0.1) 70%,
       #090909 100%
     ),
-    url("/assets/images/projects/musicVisualizer/cover.png");
+    url("../images/projects/musicVisualizer/cover.png");
   background-position: center;
   background-size: cover;
 }
@@ -664,7 +664,7 @@ div::selection {
       rgba(0, 0, 0, 0.1) 70%,
       #090909 100%
     ),
-    url("/assets/images/projects/figma/cashFlow.png");
+    url("../images/projects/figma/cashFlow.png");
   background-position: center;
   background-size: cover;
 }
@@ -677,7 +677,7 @@ div::selection {
       rgba(0, 0, 0, 0.1) 70%,
       #090909 100%
     ),
-    url("/assets/images/projects/yuuki/main.png");
+    url("../images/projects/yuuki/main.png");
   background-position: center;
   background-size: cover;
 }
@@ -690,7 +690,7 @@ div::selection {
       rgba(0, 0, 0, 0.1) 70%,
       #090909 100%
     ),
-    url("/assets/images/projects/eCommerce/springboot.png");
+    url("../images/projects/eCommerce/springboot.png");
   background-position: center;
   background-size: cover;
 }
@@ -702,7 +702,7 @@ div::selection {
       rgba(0, 0, 0, 0.1) 70%,
       #090909 100%
     ),
-    url("/assets/images/projects/jobBox/main.png");
+    url("../images/projects/jobBox/main.png");
   background-position: center;
   background-size: cover;
 }
@@ -715,7 +715,7 @@ div::selection {
       rgba(0, 0, 0, 0.1) 70%,
       #090909 100%
     ),
-    url("/assets/images/projects/FreeFlight/main.png");
+    url("../images/projects/FreeFlight/main.png");
   background-position: center;
   background-size: cover;
 }
