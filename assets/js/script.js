@@ -180,7 +180,6 @@ document.addEventListener("DOMContentLoaded", function () {
   animateIcons(".icon")
   animateIcons(".tdt-logo")
   animateIcons(".icon-logo")
-
   animateSlider(".swiper-slide")
 
 
@@ -405,7 +404,9 @@ contactButton()
     // Clear existing animations
     gsap.killTweensOf("*");
     // Clear existing ScrollTriggers
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    // ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    ScrollTrigger.refresh();
+
     // Reinitialize animations
     unAnimateImages();
     animateImages();
