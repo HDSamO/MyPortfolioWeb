@@ -1,7 +1,19 @@
 var navBarInFlag = false
 var fallenFlag = false;
 
-window.onload = firstLoad()
+
+//remove loading screen when done
+window.onload = function() {
+  const loadingScreen = document.getElementById("loading-screen");
+
+  gsap.to(loadingScreen, {
+    opacity: 0,
+    duration: 1.0,
+    onComplete: () => {
+      loadingScreen.style.display = "none";
+    }
+  });
+}
 var splitName 
 var splitTitle
 var projectCards
@@ -120,20 +132,21 @@ function navbarFadeOut() {
 
   
 document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger);
-    const arrow = document.getElementById('arrow');
+  firstLoad()
+  gsap.registerPlugin(ScrollTrigger);
+  const arrow = document.getElementById('arrow');
 
-    // Initialize SplitType
-    splitName = new SplitType('#name-animation', { types: 'chars' });
-    splitTitle = new SplitType('#title-animation', { types: 'chars' });
+  // Initialize SplitType
+  splitName = new SplitType('#name-animation', { types: 'chars' });
+  splitTitle = new SplitType('#title-animation', { types: 'chars' });
 
-    const contactButton = document.getElementById("contact-button")
-    contactButton.addEventListener("mouseenter", () => {
-      gsap.to("#contact-button", {duration: 0.2, scale: 1.1 , })
-    })
-    contactButton.addEventListener("mouseleave", () => {
-      gsap.to("#contact-button", {duration: 0.2, scale: 1, })
-    })
+  const contactButton = document.getElementById("contact-button")
+  contactButton.addEventListener("mouseenter", () => {
+    gsap.to("#contact-button", {duration: 0.2, scale: 1.1 , })
+  })
+  contactButton.addEventListener("mouseleave", () => {
+    gsap.to("#contact-button", {duration: 0.2, scale: 1, })
+  })
 
 
   // Function to toggle project details
@@ -201,6 +214,8 @@ document.addEventListener("DOMContentLoaded", function () {
       hideArrow();
     }
   });
+
+
 });
 
 

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+  margin: 0;
+}
+
 main {
   overflow: hidden;
 }
@@ -828,11 +833,10 @@ div::selection {
 
 .arrow {
   position: absolute;
-  bottom: -10%; /* Vertically center */
+  bottom: 35%; /* Vertically center */
   left: 40%; /* Position to the right of the button */
   /* transform: translateY( 50%);  */
   font-size: 5rem; /* Adjus t font size */
   color: #fff; /* Arrow color */
   /* animation: bounce-horizontal 1s infinite; */
 }
-
